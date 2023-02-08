@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Board {
     int size;
-    int playerTurn;
+    String playerTurn = "A";
     String[][] board;
 
 
@@ -30,13 +30,24 @@ public class Board {
         }
     }
 
-    public String[][] addPlayer(int x1, int y1) {
-        
-        
-        return board;
+    public void addPlayer(int x1, int y1) {
+        board[x1][y1] = playerTurn;
+        if (playerTurn == "A") {
+            playerTurn = "B";
+        } else {
+            playerTurn = "A";
+        }
     }
 
     public void movePlayer() {
 
+    }
+
+    public void clearBoard() {
+
+    }
+    
+    public void showPlayerTurn() {
+        
     }
 }
